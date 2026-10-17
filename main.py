@@ -1,4 +1,3 @@
-
 import random
 import uuid
 
@@ -231,12 +230,12 @@ with left_col:
         unsafe_allow_html=True,
     )
     st.button(
-        f"🍴 {left_menu} 선택",
-        key=f"left_{st.session_state.game_id}_{round_index}_{match_index}",
-        use_container_width=True,
-        on_click=choose_menu,
-        args=(left_menu,),
-    )
+    f"🍴 {left_menu} 선택",
+    key=f"choose_left_{st.session_state.game_id}_{round_index}_{match_index}",
+    use_container_width=True,
+    on_click=choose_menu,
+    args=(left_menu,),
+)
 
 with vs_col:
     st.markdown("<div style='height:95px;'></div>", unsafe_allow_html=True)
@@ -256,12 +255,12 @@ with right_col:
         unsafe_allow_html=True,
     )
     st.button(
-        f"🍴 {right_menu} 선택",
-        key=f"right_{st.session_state.game_id}_{round_index}_{match_index}",
-        use_container_width=True,
-        on_click=choose_menu,
-        args=(right_menu,),
-    )
+    f"🍴 {right_menu} 선택",
+    key=f"choose_right_{st.session_state.game_id}_{round_index}_{match_index}",
+    use_container_width=True,
+    on_click=choose_menu,
+    args=(right_menu,),
+)
 
 st.divider()
 st.caption(
